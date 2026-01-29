@@ -19,7 +19,7 @@
     "publish-dev:core": "npm run build:core && cd packages/core && npm publish --tag beta",
     "publish-dev:dashboard": "npm run build:dashboard && cd packages/dashboard && npm publish --tag beta",
     "release": "bun run release.js",
-    "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
+    "chromatic": "CHROMATIC=true npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "dependencies": {
     "dayjs": "^1.11.10"

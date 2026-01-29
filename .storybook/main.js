@@ -24,8 +24,9 @@ const config = {
   async viteFinal(baseConfig, { configType }) {
     let basePath = '/'
 
-    if (configType === 'PRODUCTION') {
+    if (configType === 'PRODUCTION' && !process.env.CHROMATIC) {
       // Your production configuration goes here.
+      // Skip custom base path for Chromatic builds
       basePath = '/storybook/'
     }
 
