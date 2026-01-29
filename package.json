@@ -18,7 +18,8 @@
     "build": "npm run build:core && npm run build:dashboard && npm install && npm run build:storybook && npm run build:landing",
     "publish-dev:core": "npm run build:core && cd packages/core && npm publish --tag beta",
     "publish-dev:dashboard": "npm run build:dashboard && cd packages/dashboard && npm publish --tag beta",
-    "release": "bun run release.js"
+    "release": "bun run release.js",
+    "chromatic": "npx chromatic --project-token=$CHROMATIC_PROJECT_TOKEN"
   },
   "dependencies": {
     "dayjs": "^1.11.10"
@@ -35,6 +36,7 @@
     "@vitejs/plugin-vue": "^5.2.4",
     "@vue/eslint-config-prettier": "^8.0.0",
     "autoprefixer": "^10.4.16",
+    "chromatic": "^13.3.5",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-vue": "^9.17.0",
